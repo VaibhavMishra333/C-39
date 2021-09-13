@@ -9,7 +9,7 @@ var jungle, invisiblejungle;
 
 var obstaclesGroup, obstacle1;
 
-var score=0;
+var score;
 
 var gameOver, restart;
 
@@ -60,7 +60,7 @@ function setup() {
   shrubsGroup = new Group();
   obstaclesGroup = new Group();
   
-  score = 0;
+  score=0;
 
 }
 
@@ -140,6 +140,7 @@ function draw() {
   
   if(score >= 500){
     kangaroo.visible = false;
+    
     textSize(30);
     stroke(3);
     fill("black");
@@ -193,42 +194,6 @@ function spawnObstacles() {
   }
 }
 
-/*function reset(){
-  gameState = PLAY;
-  gameOver.visible = true;
-  restart.visible = true;
-  kangaroo.visible = true;
-  kangaroo.changeAnimation("running",
-                kangaroo_running);
-  obstaclesGroup.Each();
-  shrubsGroup.destroyEach();
-  score = 0;
-}*/
-
-/*function reset(){
-  gameState = PLAY;
-  gameOver.visible = false;
-  restart.visible = false;
-  kangaroo.visible = true;
-  kangaroo.changeAnimation("running",
-               kangaroo_running);
-  obstaclesGroup.destroyEach();
-  shrubsGroup.destroyEach();
-
-}*/
-
-/*function reset(){
-  gameState = PLAY;
-  gameOver.visible = false;
-  restart.visible = false;
-  kangaroo.visible = false;
-  kangaroo.changeAnimation("running",
-               kangaroo_running);
-  obstaclesGroup.destroyeach();
-  shrubsGroup.destroyeach();
-  score = 0;
-}*/
-
 function reset(){
   gameState = PLAY;
   gameOver.visible = false;
@@ -240,4 +205,3 @@ function reset(){
   shrubsGroup.destroyEach();
   score = 0;
 }
-
